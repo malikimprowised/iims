@@ -5,15 +5,14 @@ import "database/sql"
 import _"github.com/lib/pq"
 import "fmt"
 
-const (
-    DB_USER     = "mohit"
-    DB_PASSWORD = ""
-    DB_NAME     = "mohit"
-)
+// const (
+//     DB_USER     = "malik"
+//     DB_PASSWORD = ""
+//     DB_NAME     = "iims"
+// )
 
 func main() {
-  dbinfo := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable",
-    DB_USER, DB_PASSWORD, DB_NAME)
+  dbinfo := fmt.Sprintf("user=malik dbname=iims sslmode=disable")
   db, err := sql.Open("postgres", dbinfo)
   checkErr(err)
   defer db.Close()
