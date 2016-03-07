@@ -6,14 +6,14 @@ import _"github.com/lib/pq"
 import "fmt"
 
 const (
-    DB_USER     = "malik"
+    DB_USER     = "mohit"
     DB_PASSWORD = ""
-    DB_NAME     = "malik"
+    DB_NAME     = "mohit"
 )
 
 func main() {
   dbinfo := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable",
-      DB_USER, DB_PASSWORD, DB_NAME)
+    DB_USER, DB_PASSWORD, DB_NAME)
   db, err := sql.Open("postgres", dbinfo)
   checkErr(err)
   defer db.Close()
@@ -26,6 +26,6 @@ func main() {
 
 func checkErr(err error) {
   if err != nil {
-      panic(err)
+    panic(err)
   }
 }
