@@ -4,6 +4,8 @@ create table challenge_attempts (
   input text,
   output text,
   solution text,
-  status int
+  status int,
+  created timestamp,
+  modified timestamp
 -- all the response from hankerrank
 )
